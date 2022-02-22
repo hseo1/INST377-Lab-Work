@@ -5,5 +5,5 @@ document.addEventListener('DOMContentLoaded', () => {
   const StartBtn = document.querySelector('#start-button')
   const width = 10
 
-  console.log(squares)
+  /* console.log(squares) */
 })

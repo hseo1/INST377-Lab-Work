@@ -52,30 +52,50 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* draw the Tetromino */
   function draw() {
-    current.forEach(index => {
+    current.forEach((index) => {
       squares[currentPosition + index].classList.add('tetromino');
     });
   }
 
   /* undraw the Tetromino */
   function undraw() {
-    current.forEach(index => {
+    current.forEach((index) => {
       squares[currentPosition + index].classList.remove('tetromino');
     });
   }
 
-  /* make the tetromino move down every second */
-  timerId = setInterval(moveDown, 1000);
+  /* freeze function */
+  function freeze() {
+    if (current.some((index) => squares[currentPosition + index + width].classList.contains('taken'))) {
+      current.forEach((index) => squares[currentPosition + index].classList.add('taken'));
+      /* start a new tetromino falling */
+      random = Math.floor(Math.random() * theTetrominoes.length);
+      current = theTetrominoes[random][currentRotation];
+      currentPosition = 4;
+      draw();
+    }
+  }
 
   /* move down function */
   function moveDown() {
     undraw();
     currentPosition += width;
     draw();
+    freeze();
   }
 
-  /* freeze function 
-  function freeze() {
-    if()
-  } */
+  /* make the tetromino move down every second */
+  timerId = setInterval(moveDown, 1000);
+
+  /* move the tetromino left, unless is at the edge or there is a blockage */
+  function moveLeft() {
+    undraw();
+    const isAtLeftEdge = current.some((index) => (currentPosition + index) % width === 0);
+    if (!isAtLeftEdge) currentPosition -= 1;
+    if (current.some((index) => squares[currentPosition + index].classList.contains('taken'))) {
+      currentPosition += 1;
+    }
+  }
+
+  draw();
 });

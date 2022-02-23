@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* rotate the tetromino */
   function rotate() {
-    draw();
+    undraw();
     currentRotation += 1;
     /* if the current rotation gets to 4, make it go back to 0 */
     if (currentRotation === current.length) {

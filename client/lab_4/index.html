@@ -1,19 +1,59 @@
-YOUR NAME Lab 4: HTML Forms
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HYELIM SEO Lab 3: Flexbox Demo</title>
+        <link rel='stylesheet' href='styles.css'/>
+    </head>
+    <body>
+        <h1 class='name'>HYELIM SEO Lab 3: Flexbox Demo</h1>
 
-today's date
-Database Demos
-Main Page
+        <div class='menu-container'>
+            <div class='menu'>
+                <div class='todays_date'>Feb 13, 2022</div>
+                <div class='links'>
+                    <div class='database_demos'><a href='data.html' target='_blank'>Database Demos</a></div>
+                    <div class='main_page'><a href='index.html'>Main Page</a></div>
+                </div>
+            </div>
+        </div>
 
-Group Project Link (no site yet)
-Awesome Logo
-Github Link
+        <div class='header-container'>
+            <div class='header'>
+                <div class='group_project_link'>Group Project Link (no site yet)</div>
+                <div class='awesome_logo'>
+                    <img src='images/awesome-logo.svg'/>
+                </div>
+                <div class='github_link'><a href='https://github.com/hseo1/INST377-Lab-Work' target='_blank'>My Github</a></div>
+            </div>
+        </div>
 
-image_1
-image_2
-image_3
-image_4
-image_5
+        <div class='photo-grid-container'>
+            <button class='carousel_button' id='carousel_button_prev'>Prev</button>
+            <div class='carousel'>
+                <div class='carousel_item carousel_item_visible'>
+                    <img src='images/one.svg'/>
+                </div>
+                <div class='carousel_item'>
+                    <img src='images/two.svg'/>
+                </div>
+                <div class='carousel_item'>
+                    <img src='images/three.svg'/>
+                </div>
+                <div class='carousel_item'>
+                    <img src='images/four.svg'/>
+                </div>
+                <div class='carousel_item'>
+                    <img src='images/five.svg'/>
+                </div>
+            </div>
+            <button class='carousel_button' id='carousel_button_next'>Next</button>
+        </div>
 
-footer item 1
-footer item 2
-footer item 3
+        <div class='footer'>
+            <div class='footer-item footer-one'>footer item 1</div>
+            <div class='footer-item footer-two'>footer item 2</div>
+            <div class='footer-item footer-three'>footer item 3</div>
+        </div>
+        <script src='script.js'></script>
+    </body>
+</html>

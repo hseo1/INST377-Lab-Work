@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'/>
+        <title>Hyelim Seo's Lab 6</title>
+        <link rel='stylesheet' href='styles.css'/>
+    </head>
+    <body>
+        <div class='container'>Hyelim Seo's Lab 6</div>
+
+        <div class='columns'>
+            <form action='' method='get' class='upper'>
+                <label for='first-name'>First Name</label>
+                <input id='first-name' name='first-name' type='text'/>
+
+                <label for='food-preference'>Food Preference</label>
+                <input id='food-preference' name='food-preference' type='text'/>
+            
+                <fieldset class='bottom'>
+                    <legend>Veggie or Vegan?</legend>
+
+                    <label for='yes' class='radio-label'>Yes</label>
+                    <input id='yes' name='yes' type='radio'/>
+
+                    <label for='no' class='radio-label'>No</label>
+                    <input id='no' name='no' type='radio'/>
+                </fieldset>
+                
+                <button>Submit</button>
+            </form>
+            <div class='wrapper'><h1>Restaurants List</h1>
+                <ul id='resto-list'></ul>
+                <ul class='resto-list'></ul>
+            </div>
+        </div>
+        
+        <script src='script.js' charset='UTF-8'></script>
+    </body>
+</html>
